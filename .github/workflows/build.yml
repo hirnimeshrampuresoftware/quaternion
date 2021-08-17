@@ -23,7 +23,7 @@ jobs:
       CIBW_ARCHS: ${{matrix.archs}}
       CIBW_BEFORE_BUILD: python -c "print(('#'*130+'\n')*10)" && pip install "numpy>=1.13"
       CIBW_TEST_REQUIRES: pytest pytest-cov
-      CIBW_TEST_COMMAND: ls
+      CIBW_TEST_COMMAND: pwd
 
     steps:
       - uses: actions/checkout@v2
